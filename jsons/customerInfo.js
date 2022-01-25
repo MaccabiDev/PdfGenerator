@@ -1,0 +1,25 @@
+module.exports={
+    customer:{ MemberIdCode: '0',
+     MemberId: 25392309,
+     ReturnCode: '0',
+     LNameHebrew: 'בן עזר',
+     FNameHebrew: 'דור',
+     Sex: 'ז',
+     Age: { Years: 46, Months: 5, Weeks: 1, Days: 2 },
+     BirthDate: '1973-07-28T00:00:00',
+     MaccabiNomination: 'A',
+     MembershipStatus: '1',
+     BuyServicesOrganizationCode: 0,
+     UnifierId: 25392309,
+     UnifierIdCode: '0',
+     UnifierFirstName: 'דור',
+     UnifierLastName: 'בן עזר',
+     TransitionType: '',
+     UserLoginStatus: '0',
+     LanguageCode: 0,
+     StatusMembership: 0,
+     StatusReason: 0,
+     ChecksumID: '83F0CCA2B9C84A905E286B763C55031B',
+     IsParent: false }
+     
+    }

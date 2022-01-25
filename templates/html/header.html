@@ -1,0 +1,64 @@
+<style>
+    .pdf-header-section {
+        width: 100%;
+        margin-right: 10px;
+        margin-left: 10px;
+        direction: rtl;
+        color: #525558;
+        font-family: 'Heebo', sans-serif;
+        font-size: 12px;
+        padding-bottom: 0 !important;
+    }
+
+    .flex-between {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header {
+        font-weight: 700;
+        color: #141414;
+    }
+
+    .member-details {
+        font-size: 10px;
+        margin-top: 1px;
+    }
+
+    .date-details {
+        font-size: 8px;
+    }
+
+    .page-number {
+        margin-right: 20px;
+    }
+
+    @import url("https://fonts.googleapis.com/css2?family=Heebo");
+
+</style>
+
+
+<div class="pdf-header-section">
+    <div class="flex-between">
+        <div>
+            <div class="header">תוצאת בדיקת לב (קרדיולוגיה)</div>
+            <div class="member-details">
+                {{member_name}} | ת.ז:{{data.member_id}}
+                {{#doctor_name}}
+                | רופא/ה מפנה: <span class="header">{{doctor_name}}</span>
+                {{/doctor_name}}
+            </div>
+        </div>
+        <div>
+            <img src="data:image/png;base64,{{image}}" width="100" />
+        </div>
+    </div>
+    <div class="flex-between">
+        <div class="header">{{title}}</div>
+        <div class="flex-between date-details">
+            <div>תאריך הדפסה: {{date}}</div>
+            <div class="page-number"><span class="pageNumber"></span> מתוך <span class="totalPages"></span>
+            </div>
+        </div>
+    </div>
+</div>

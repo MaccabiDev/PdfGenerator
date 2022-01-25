@@ -1,0 +1,2 @@
+{"message":"failed to create pdf : Error: Could not find expected browser (chrome) locally. Run `npm install` to download the correct Chromium revision (950341).","level":"error","timestamp":"2022-01-24T09:13:05.288Z"}
+{"message":"failed to create pdf : Error: Could not find expected browser (chrome) locally. Run `npm install` to download the correct Chromium revision (950341).","level":"error","timestamp":"2022-01-24T09:18:38.933Z"}

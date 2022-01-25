@@ -1,0 +1,155 @@
+html {
+  zoom: 0.753; /*workaround for phantomJS2 rendering pages too large*/
+}
+
+body {
+  color: #000;
+  font-size: 14px;
+  font-family: RegularFont;
+  direction: rtl;
+  margin: 0 auto;
+  box-sizing: border-box !important;
+}
+
+.pdf-header {
+  text-align: center;
+}
+.header-img {
+  margin-top: 30px;
+}
+
+.print-date {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-column {
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.ml-40 {
+  margin-left: 40px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.box {
+  width: 500px;
+  min-height: 285px;
+  margin-bottom: 10px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  border: solid 1px #c3d1e2;
+  background-image: linear-gradient(
+    155deg,
+    rgba(13, 71, 161, 0.2) -24%,
+    rgba(13, 71, 161, 0) 48%
+  );
+}
+
+.box-header {
+  width: 500px;
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.header-row {
+  width: 40%;
+}
+.header-row:first-child {
+  margin-left: 20px;
+}
+
+.header-col {
+  margin-bottom: 30px;
+}
+
+.img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  vertical-align: top;
+  width: 150px;
+}
+.box-body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.vacc-col:first-child {
+  margin-left: 11px;
+}
+.dose {
+  margin-top: -8px;
+}
+/* .vacc-col > *:not(:last-child) {
+  margin-bottom: 4px;
+} */
+/* .vacc-col:not(:first-child) {
+  vertical-align: center;
+} */
+
+.align-center {
+  text-align: center;
+}
+
+.font-sm {
+  font-size: 10px;
+}
+.font-xs {
+  font-size: 8px;
+}
+.font-md {
+  font-size: 16px;
+}
+.font-xl {
+  font-size: 40px;
+}
+
+.horizontal-line {
+  width: 500px;
+  height: 0.5px;
+  /* margin: 40px auto 30px; */
+  margin-bottom: 20px;
+  background-color: #d3ddea;
+}
+.horizontal-line:last-child {
+  display: none;
+}
+.vertical-line {
+  width: 0.5px;
+  height: 69px;
+  margin: 0 30px;
+  background-color: #d3ddea;
+}
+.uppercase {
+  text-transform: uppercase;
+}

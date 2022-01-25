@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="style/ecg.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div>
+        <div>
+            <div class="pdf-table">
+                <div class="margin-left header">
+                    {{#examination_date}}
+                    <div>תאריך בדיקה:</div>
+                    {{/examination_date}}
+                    {{#operator_by}}
+                    <div>בוצע ע״י:</div>
+                    {{/operator_by}}
+                    {{#cardio_index}}
+                    <div>מדדים:</div>
+                    {{/cardio_index}}
+                    {{#sinus_rhythm}}
+                    <div>קצב לב:</div>
+                    {{/sinus_rhythm}}
+                </div>
+                <div>
+                    {{#examination_date}}
+                    <div class="line-break">{{examination_date}}</div>
+                    {{/examination_date}}
+                    {{#operator_by}}
+                    <div class="line-break">{{operator_by}}</div>
+                    {{/operator_by}}
+                    {{#cardio_index}}
+                    <div class="line-break">{{cardio_index}}</div>
+                    {{/cardio_index}}
+                    {{#sinus_rhythm}}
+                    <div class="line-break">{{sinus_rhythm}}</div>
+                    {{/sinus_rhythm}}
+                </div>
+            </div>
+            {{#summary}}
+            <div>
+                <div class="content header">סיכום</div>
+                <div class="line-break">{{summary}}</div>
+            </div>
+            {{/summary}}
+
+            {{#isDisplaySecuritylevel}}
+            <div>
+                <div class="security-level">
+                    {{#electronic_signature_date}}
+                    <div>
+                        <div>{{electronic_signature_date}}</div>
+                        <div class="border"></div>
+                        <div class="header">נחתם בתאריך</div>
+                    </div>
+                    {{/electronic_signature_date}}
+                    {{#signed_by}}
+                    <div>
+                        <div>{{signed_by}}</div>
+                        <div class="border"></div>
+                        <div class="header">נחתם ע"י</div>
+                    </div>
+                    {{/signed_by}}
+                    {{#responsible_name}}
+                    <div>
+                        <div>{{responsible_name}}</div>
+                        <div class="border"></div>
+                        <div class="header">רופא/ה אחראי/ת</div>
+                    </div>
+                    {{/responsible_name}}
+                </div>
+            </div>
+            {{/isDisplaySecuritylevel}}
+        </div>
+    </div>
+</body>
+
+</html>

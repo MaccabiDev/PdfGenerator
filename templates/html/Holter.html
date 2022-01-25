@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="style/ecg.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div>
+        <div>
+            <div class="pdf-table">
+                <div class="margin-left header">
+                    {{#examination_date}}
+                    <div>תאריך בדיקה:</div>
+                    {{/examination_date}}
+                    {{#done_by}}
+                    <div>בוצע ע״י:</div>
+                    {{/done_by}}
+                    {{#repeated_examination_date}}
+                    <div>בדיקה חוזרת:</div>
+                    {{/repeated_examination_date}}
+                    {{#assembling_date}}
+                    <div>תאריך ההרכבה:</div>
+                    {{/assembling_date}}
+                    {{#holter_installer}}
+                    <div>מתקין ההולטר:</div>
+                    {{/holter_installer}}
+                    {{#holter_result}}
+                    <div>תשובה:</div>
+                    {{/holter_result}}
+                </div>
+                <div>
+                    {{#examination_date}}
+                    <div class="line-break">{{examination_date}}</div>
+                    {{/examination_date}}
+                    {{#done_by}}
+                    <div class="line-break">{{done_by}}</div>
+                    {{/done_by}}
+                    {{#repeated_examination_date}}
+                    <div class="line-break">{{repeated_examination_date}}</div>
+                    {{/repeated_examination_date}}
+                    {{#assembling_date}}
+                    <div class="line-break">{{assembling_date}}</div>
+                    {{/assembling_date}}
+                    {{#holter_installer}}
+                    <div class="line-break">{{holter_installer}}</div>
+                    {{/holter_installer}}
+                    {{#holter_result}}
+                    <div class="line-break">{{holter_result}}</div>
+                    {{/holter_result}}
+                </div>
+            </div>
+
+            {{#referring_reason}}
+            <div>
+                <div class="content header">סיבת פניה:</div>
+                <div class="line-break">{{referring_reason}}</div>
+            </div>
+            {{/referring_reason}}
+            {{#drug}}
+            <div>
+                <div class="content header">תרופות רלוונטיות:</div>
+                <div class="line-break">{{drug}}</div>
+            </div>
+            {{/drug}}
+
+            <div class="pdf-table margin-top">
+                <div class="margin-left header">
+                    {{#eximination_start_time}}
+                    <div>תחילת הבדיקה:</div>
+                    {{/eximination_start_time}}
+                    {{#eximination_end_time}}
+                    <div>סוף הבדיקה:</div>
+                    {{/eximination_end_time}}
+                    {{#total_hours}}
+                    <div>סה"כ:</div>
+                    {{/total_hours}}
+                </div>
+                <div>
+                    {{#eximination_start_time}}
+                    <div class="line-break">{{eximination_start_time}}</div>
+                    {{/eximination_start_time}}
+                    {{#eximination_end_time}}
+                    <div class="line-break">{{eximination_end_time}}</div>
+                    {{/eximination_end_time}}
+                    {{#total_hours}}
+                    <div class="line-break">{{total_hours}} שעות</div>
+                    {{/total_hours}}
+
+                </div>
+            </div>
+
+            <div class="pdf-table">
+                <div class="margin-left header">
+                    {{#basic_rhythm}}
+                    <div>קצב בסיסי:</div>
+                    {{/basic_rhythm}}
+                    {{#in_speed_for_minute}}
+                    <div>מהירות מינימלית:</div>
+                    {{/in_speed_for_minute}}
+                    {{#max_speed_for_minute}}
+                    <div>מהירות מקסימלית:</div>
+                    {{/max_speed_for_minute}}
+                    {{#avg_speed_for_minute}}
+                    <div>מהירות ממוצעת:</div>
+                    {{/avg_speed_for_minute}}
+
+                </div>
+                <div>
+                    {{#basic_rhythm}}
+                    <div class="line-break">{{basic_rhythm}}</div>
+                    {{/basic_rhythm}}
+                    {{#in_speed_for_minute}}
+                    <div class="line-break">{{in_speed_for_minute}} לדקה</div>
+                    {{/in_speed_for_minute}}
+                    {{#max_speed_for_minute}}
+                    <div class="line-break">{{max_speed_for_minute}} לדקה</div>
+                    {{/max_speed_for_minute}}
+                    {{#avg_speed_for_minute}}
+                    <div class="line-break">{{avg_speed_for_minute}} לדקה</div>
+                    {{/avg_speed_for_minute}}
+
+                </div>
+            </div>
+
+            {{#avg_speed_for_minute_awake}}
+            <div>
+                <div class="content header">מהירות ממוצעת בשעות העירנות:</div>
+                <div class="line-break">{{avg_speed_for_minute_awake}} לדקה</div>
+            </div>
+            {{/avg_speed_for_minute_awake}}
+            {{#avg_speed_for_minute_sleep}}
+            <div>
+                <div class="content header">מהירות ממוצעת בשעות שינה:</div>
+                <div class="line-break">{{avg_speed_for_minute_sleep}} לדקה</div>
+            </div>
+            {{/avg_speed_for_minute_sleep}}
+            {{#pv_cs_ventricular_interruption}}
+            <div>
+                <div class="content header">הפרעות חדריות :PVCS</div>
+                <div class="line-break">{{pv_cs_ventricular_interruption}}</div>
+            </div>
+            {{/pv_cs_ventricular_interruption}}
+            {{#pv_cs_top_ventricular_interruption}}
+            <div>
+                <div class="content header">הפרעות על חדריות :APCS</div>
+                <div class="line-break">{{pv_cs_top_ventricular_interruption}}</div>
+            </div>
+            {{/pv_cs_top_ventricular_interruption}}
+            {{#bundle_interruption}}
+            <div>
+                <div class="content header">הפרעות הולכה:</div>
+                <div class="line-break">{{bundle_interruption}} </div>
+            </div>
+            {{/bundle_interruption}}
+            {{#st_differences}}
+            <div>
+                <div class="content header">שינויים משמעותיים במקטע ST:</div>
+                <div class="line-break">{{st_differences}}</div>
+            </div>
+            {{/st_differences}}
+
+            {{#findings_according_complaints.length}}
+            <div>
+                <div class="content">הממצאים באקג בזמן התלונות</div>
+            </div>
+
+            <div>
+                <div>
+                    {{#isDisplayHour}}
+                    <div class="header content">שעה</div>
+                    {{/isDisplayHour}}
+                    {{#findings_according_complaints}}
+                    {{#hour}}
+                    <div class="line-break">{{hour}}</div>
+                    {{/hour}}
+                    {{/findings_according_complaints}}
+                </div>
+                <div>
+                    {{#isDisplayComplaint}}
+                    <div class="header content">תלונות</div>
+                    {{/isDisplayComplaint}}
+                    {{#findings_according_complaints}}
+                    {{#complaint}}
+                    <div class="line-break">{{complaint}}</div>
+                    {{/complaint}}
+                    {{/findings_according_complaints}}
+                </div>
+                <div>
+                    {{#isDisplayFinding}}
+                    <div class="header content">ממצאים</div>
+                    {{/isDisplayFinding}}
+                    {{#findings_according_complaints}}
+                    {{#finding}}
+                    <div class="line-break">{{finding}}</div>
+                    {{/finding}}
+                    {{/findings_according_complaints}}
+                </div>
+
+            </div>
+            {{/findings_according_complaints.length}}
+
+            {{#summary}}
+            <div>
+                <div class="content header">סיכום:</div>
+                <div class="line-break">{{summary}} </div>
+            </div>
+            {{/summary}}
+
+            {{#isDisplaySecuritylevel}}
+            <div>
+                <div class="security-level">
+                    {{#electronic_signature_date}}
+                    <div>
+                        <div>{{electronic_signature_date}}</div>
+                        <div class="border"></div>
+                        <div class="header">נחתם בתאריך</div>
+                    </div>
+                    {{/electronic_signature_date}}
+                    {{#signed_by}}
+                    <div>
+                        <div>{{signed_by}}</div>
+                        <div class="border"></div>
+                        <div class="header">נחתם ע"י</div>
+                    </div>
+                    {{/signed_by}}
+                    {{#responsible_name}}
+                    <div>
+                        <div>{{responsible_name}}</div>
+                        <div class="border"></div>
+                        <div class="header">רופא/ה אחראי/ת</div>
+                    </div>
+                    {{/responsible_name}}
+                </div>
+            </div>
+            {{/isDisplaySecuritylevel}}
+        </div>
+    </div>
+</body>
+
+</html>

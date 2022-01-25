@@ -1,0 +1,113 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Heebo");
+
+body {
+    background-color: white;
+    direction: rtl;
+    color: #525558;
+    font-family: "Heebo", sans-serif;
+    font-size: 12px; /*equal to 8 px*/
+  }
+  
+  .header {
+    font-weight: 700;
+    color: #141414;
+  }
+  
+  .margin-left{
+    margin-left: 26px;
+  }
+
+  .table-ltr {
+    direction: ltr;
+    justify-content: flex-end;
+  }
+  
+  .security-level {
+    display: flex;
+    text-align: center;
+    margin-top: 40px;
+    justify-content: space-between;
+    max-width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .border {
+    border-bottom: solid 0.5px #9a9a9a;
+    width: 135px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .pdf-table {
+    display: flex;
+    margin-bottom: 10px;
+    line-height: 2.25;
+  }
+
+  .content {
+    margin-bottom: 1px;
+    margin-top: 10px;
+  }
+
+  .margin-top{
+    margin-top: 10px;
+  }
+
+  .sub-header{
+    font-size: 14px;
+  }
+  
+  .table-header{
+    margin-top: 3px;
+    margin-bottom: 5px;
+    text-decoration: underline;
+  }
+  
+  .container{
+    vertical-align: middle;
+    position: relative;
+    margin: 10px;
+    width: 150;
+    height: 150;
+  }
+  
+  .img-container{
+    vertical-align: middle;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+  }
+
+  .text-inner{
+    display: inline-block;
+    position: absolute;
+  }
+  
+  .table-center{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 2.25;
+    break-inside: avoid;
+  }
+  
+  .text-center{
+    text-align: center;
+  }
+  
+  .padding-sides{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .flex-end{
+    align-self: flex-end;
+    padding-left: 15px;
+  }
+
+  .line-break{
+    white-space: pre-wrap;
+  }

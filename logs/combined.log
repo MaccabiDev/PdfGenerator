@@ -1,0 +1,18 @@
+{"message":"application started","level":"info","timestamp":"2022-01-24T08:45:57.223Z"}
+{"message":"application started","level":"info","timestamp":"2022-01-24T08:46:26.397Z"}
+{"message":"api call started on memberId: 4242","level":"info","timestamp":"2022-01-24T09:13:05.240Z"}
+{"message":"failed to create pdf : Error: Could not find expected browser (chrome) locally. Run `npm install` to download the correct Chromium revision (950341).","level":"error","timestamp":"2022-01-24T09:13:05.288Z"}
+{"message":"api call ended","level":"info","timestamp":"2022-01-24T09:13:05.289Z"}
+{"message":"application started","level":"info","timestamp":"2022-01-24T09:18:34.825Z"}
+{"message":"api call started on memberId: 4242","level":"info","timestamp":"2022-01-24T09:18:38.893Z"}
+{"message":"failed to create pdf : Error: Could not find expected browser (chrome) locally. Run `npm install` to download the correct Chromium revision (950341).","level":"error","timestamp":"2022-01-24T09:18:38.933Z"}
+{"message":"api call ended","level":"info","timestamp":"2022-01-24T09:18:38.934Z"}
+{"message":"application started","level":"info","timestamp":"2022-01-24T09:19:12.161Z"}
+{"message":"api call started on memberId: 4242","level":"info","timestamp":"2022-01-24T09:19:24.663Z"}
+{"message":"api call ended","level":"info","timestamp":"2022-01-24T09:19:30.789Z"}
+{"message":"application started","level":"info","timestamp":"2022-01-25T13:37:12.923Z"}
+{"message":"application started","level":"info","timestamp":"2022-01-25T13:41:47.195Z"}
+{"message":"api call started on memberId: 4242","level":"info","timestamp":"2022-01-25T13:41:53.844Z"}
+{"message":"api call ended","level":"info","timestamp":"2022-01-25T13:42:02.018Z"}
+{"message":"api call started on memberId: 4242","level":"info","timestamp":"2022-01-25T14:01:49.487Z"}
+{"message":"api call ended","level":"info","timestamp":"2022-01-25T14:01:53.319Z"}

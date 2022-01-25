@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="style/ecg.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div>
+        <div>
+            <div class="pdf-table">
+                <div class="margin-left header">
+                    {{#examination_date}}
+                    <div>תאריך בדיקה:</div>
+                    {{/examination_date}}
+                    {{#operator_name}}
+                    <div>בוצע ע״י:</div>
+                    {{/operator_name}}
+                    {{#answer}}
+                    <div>תשובה:</div>
+                    {{/answer}}
+                </div>
+                <div>
+                    {{#examination_date}}
+                    <div class="line-break">{{examination_date}}</div>
+                    {{/examination_date}}
+                    {{#operator_name}}
+                    <div class="line-break">{{operator_name}}</div>
+                    {{/operator_name}}
+                    {{#answer}}
+                    <div class="line-break">{{answer}}</div>
+                    {{/answer}}
+                </div>
+            </div>
+
+            {{#reason}}
+            <div>
+                <div class="content header">סיבת הבדיקה:</div>
+                <div class="line-break">{{reason}}</div>
+            </div>
+            {{/reason}}
+            {{#evaluation}}
+            <div>
+                <div class="content header">הערכת הסימפטומים:</div>
+                <div class="line-break">{{evaluation}}</div>
+            </div>
+            {{/evaluation}}
+            {{#history}}
+            <div>
+                <div class="content header">תולדות המחלה:</div>
+                <div class="line-break">{{history}}</div>
+            </div>
+            {{/history}}
+            {{#risk_factor}}
+            <div>
+                <div class="content header">גורמי סיכון:</div>
+                <div class="line-break">{{risk_factor}}</div>
+            </div>
+            {{/risk_factor}}
+            {{#pre_test}}
+            <div>
+                <div class="content header">PRE TEST:</div>
+                <div class="line-break">{{pre_test}}</div>
+            </div>
+            {{/pre_test}}
+            {{#relevant_drug}}
+            <div>
+                <div class="content header">תרופות רלוונטיות:</div>
+                <div class="line-break">{{relevant_drug}}</div>
+            </div>
+            {{/relevant_drug}}
+            {{#followed_by_medical_program}}
+            <div>
+                <div class="content header">הבדיקה בוצעה תחת טיפול:</div>
+                <div class="line-break">{{followed_by_medical_program}}</div>
+            </div>
+            {{/followed_by_medical_program}}
+
+            {{#isDisplayClinicalAtRest}}
+            <div class="table-header margin-top">נתונים קליניים במנוחה:</div>
+            <div class="pdf-table">
+                <div class="margin-left header">
+                    {{#pulse_for_minute_rest}}
+                    <div>קצב הלב:</div>
+                    {{/pulse_for_minute_rest}}
+                    {{#diastolic_pressure}}
+                    <div>לחץ דם:</div>
+                    {{/diastolic_pressure}}
+                </div>
+                <div>
+                    {{#pulse_for_minute_rest}}
+                    <div class="line-break">{{pulse_for_minute_rest}} לדקה</div>
+                    {{/pulse_for_minute_rest}}
+                    {{#diastolic_pressure}}
+                    <div class="line-break"> {{systolic_pressure}} / {{diastolic_pressure}}</div>
+                    {{/diastolic_pressure}}
+                </div>
+            </div>
+
+            {{#finding}}
+            <div>
+                <div class="content header">ממצאים חריגים בבדיקת הלב והריאות:</div>
+                <div class="line-break">{{finding}}</div>
+            </div>
+            {{/finding}}
+            {{#ecg_on_rest}}
+            <div>
+                <div class="content header">אקג:</div>
+                <div class="line-break">{{ecg_on_rest}}</div>
+            </div>
+            {{/ecg_on_rest}}
+            {{#max_pulse_by_age}}
+            <div>
+                <div class="content header">הדופק המקסימלי המצופה לגיל:</div>
+                <div class="line-break">{{max_pulse_by_age}} לדקה</div>
+            </div>
+            {{/max_pulse_by_age}}
+            {{/isDisplayClinicalAtRest}}
+
+            {{#isDisplayCourseTest}}
+            <div class="table-header margin-top">מהלך המבחן:</div>
+            <div class="pdf-table">
+                <div class="margin-left header">
+                    {{#examination_protocol}}
+                    <div>פרוטוקול הבדיקה:</div>
+                    {{/examination_protocol}}
+                    {{#examination_by_minute}}
+                    <div>הבדיקה נמשכה:</div>
+                    {{/examination_by_minute}}
+                    {{#stage}}
+                    <div>שלב:</div>
+                    {{/stage}}
+                    {{#pulse_for_minute_stress}}
+                    <div>קצב לב:</div>
+                    {{/pulse_for_minute_stress}}
+                    {{#diastolic_pressure_effort}}
+                    <div>לחץ דם בשיא המאמץ:</div>
+                    {{/diastolic_pressure_effort}}
+                    {{#percent_from_max_pulse}}
+                    <div>אחוז מהדופק המקסימלי:</div>
+                    {{/percent_from_max_pulse}}
+                    {{#max_mets}}
+                    <div>מס׳ MET’s מקסימלי:</div>
+                    {{/max_mets}}
+                    {{#physical_evaluation}}
+                    <div>הערכת כושר גופני:</div>
+                    {{/physical_evaluation}}
+                </div>
+                <div>
+                    {{#examination_protocol}}
+                    <div class="line-break">{{examination_protocol}}</div>
+                    {{/examination_protocol}}
+                    {{#examination_by_minute}}
+                    <div class="line-break">{{examination_by_minute}} דקות</div>
+                    {{/examination_by_minute}}
+                    {{#stage}}
+                    <div class="line-break">{{stage}}</div>
+                    {{/stage}}
+                    {{#pulse_for_minute_stress}}
+                    <div class="line-break">{{pulse_for_minute_stress}} לדקה</div>
+                    {{/pulse_for_minute_stress}}
+                    {{#diastolic_pressure_effort}}
+                    <div class="line-break">{{systolic_pressure_effort}} / {{diastolic_pressure_effort}}</div>
+                    {{/diastolic_pressure_effort}}
+                    {{#percent_from_max_pulse}}
+                    <div class="line-break">{{percent_from_max_pulse}}</div>
+                    {{/percent_from_max_pulse}}
+                    {{#max_mets}}
+                    <div class="line-break">{{max_mets}}</div>
+                    {{/max_mets}}
+                    {{#physical_evaluation}}
+                    <div class="line-break">{{physical_evaluation}}</div>
+                    {{/physical_evaluation}}
+                </div>
+            </div>
+
+            {{#clinical_reaction}}
+            <div>
+                <div class="content header">תגובה קלינית:</div>
+                <div class="line-break">{{clinical_reaction}}</div>
+            </div>
+            {{/clinical_reaction}}
+            {{#ecg_on_stress}}
+            <div>
+                <div class="content header">אקג במאמץ:</div>
+                <div class="line-break">{{ecg_on_stress}}</div>
+            </div>
+            {{/ecg_on_stress}}
+            {{/isDisplayCourseTest}}
+
+            {{#arrhythmia_on_stress}}
+            <div>
+                <div class="content header">הפרעות קצב במאמץ / התאוששות:</div>
+                <div class="line-break">{{arrhythmia_on_stress}}</div>
+            </div>
+            {{/arrhythmia_on_stress}}
+            {{#st_on_stress}}
+            <div>
+                <div class="content header">מקטע ST במאמץ / התאוששות:</div>
+                <div class="line-break">{{st_on_stress}}</div>
+            </div>
+            {{/st_on_stress}}
+            {{#stop_reason}}
+            <div>
+                <div class="content header">סיבת הפסקת הבדיקה:</div>
+                <div class="line-break">{{stop_reason}}</div>
+            </div>
+            {{/stop_reason}}
+            {{#repeated_ecg_in_minute}}
+            <div>
+                <div class="content header">אקג חוזר למצב התחלתי בתוך:</div>
+                <div class="line-break">{{repeated_ecg_in_minute}} דקות</div>
+            </div>
+            {{/repeated_ecg_in_minute}}
+            {{#duke_score}}
+            <div>
+                <div class="content header">DUKE SCORE:</div>
+                <div class="line-break">{{duke_score}}</div>
+            </div>
+            {{/duke_score}}
+            {{#pulse_decrease_in2minute}}
+            <div>
+                <div class="content header">קצב ירידת הדופק ב-2 דקות ראשונות לאחר סיום המאמץ:</div>
+                <div class="line-break">{{pulse_decrease_in2minute}}</div>
+            </div>
+            {{/pulse_decrease_in2minute}}
+            {{#todo_physical_activity_recommendation}}
+            <div>
+                <div class="content header">המלצות לפעילות גופנית:</div>
+                <div class="line-break">{{duke_score}}</div>
+            </div>
+            {{/todo_physical_activity_recommendation}}
+
+            {{#summary}}
+            <div>
+                <div class="content header">סיכום:</div>
+                <div class="line-break">{{summary}} </div>
+            </div>
+            {{/summary}}
+
+            {{#isDisplaySecuritylevel}}
+            <div>
+                <div class="security-level">
+                    {{#electronic_signature_date}}
+                    <div>
+                        <div>{{electronic_signature_date}}</div>
+                        <div class="border"></div>
+                        <div class="header">נחתם בתאריך</div>
+                    </div>
+                    {{/electronic_signature_date}}
+                    {{#signed_by}}
+                    <div>
+                        <div>{{signed_by}}</div>
+                        <div class="border"></div>
+                        <div class="header">נחתם ע"י</div>
+                    </div>
+                    {{/signed_by}}
+                    {{#responsible_name}}
+                    <div>
+                        <div>{{responsible_name}}</div>
+                        <div class="border"></div>
+                        <div class="header">רופא/ה אחראי/ת</div>
+                    </div>
+                    {{/responsible_name}}
+                </div>
+            </div>
+            {{/isDisplaySecuritylevel}}
+        </div>
+    </div>
+</body>
+
+</html>

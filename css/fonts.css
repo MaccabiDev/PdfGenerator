@@ -1,0 +1,91 @@
+﻿@font-face {
+  font-family: "ThinFont";
+  src: url("../fonts/Heebo-Thin.eot");
+  src: url("../fonts/Heebo-Thin.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Heebo-Thin.woff2") format("woff2"),
+    url("../fonts/Heebo-Thin.woff") format("woff"),
+    url("../fonts/Heebo-Thin.ttf") format("truetype"),
+    url("../fonts/Heebo-Thin.svg#svgFontName") format("svg");
+}
+
+@font-face {
+  font-family: "RegularFont";
+  src: url("../fonts/heebo-v2-hebrew-regular.eot");
+  src: url("../fonts/heebo-v2-hebrew-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/heebo-v2-hebrew-regular.woff2") format("woff2"),
+    url("../fonts/heebo-v2-hebrew-regular.woff") format("woff"),
+    url("../fonts/heebo-v2-hebrew-regular.ttf") format("truetype"),
+    url("../fonts/heebo-v2-hebrew-regular.svg#svgFontName") format("svg");
+}
+
+@font-face {
+  font-family: "MediumFont";
+  src: url("../fonts/Heebo-Medium.eot");
+  src: url("../fonts/Heebo-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Heebo-Medium.woff2") format("woff2"),
+    url("../fonts/Heebo-Medium.woff") format("woff"),
+    url("../fonts/Heebo-Medium.ttf") format("truetype"),
+    url("../fonts/Heebo-Medium.svg#svgFontName") format("svg");
+}
+
+@font-face {
+  font-family: "BoldFont";
+  src: url("../fonts/Heebo-Bold.eot");
+  src: url("../fonts/Heebo-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Heebo-Bold.woff2") format("woff2"),
+    url("../fonts/Heebo-Bold.woff") format("woff"),
+    url("../fonts/Heebo-Bold.ttf") format("truetype"),
+    url("../fonts/Heebo-Bold.svg#svgFontName") format("svg");
+}
+.thin {
+  font-family: ThinFont;
+  font-weight: 100;
+}
+.regular {
+  font-family: RegularFont;
+}
+
+.medium {
+  font-family: MediumFont;
+}
+
+.testNameFontWeight {
+  font-weight: 500;
+}
+
+.bold {
+  font-family: BoldFont;
+}
+
+.colorBlack {
+  color: #141414;
+}
+
+.colorGray {
+  color: #525558;
+}
+
+.colorRed {
+  color: #d71b1f;
+}
+
+.bgGray {
+  background-color: rgba(154, 154, 154, 0.2);
+}
+
+.font4 {
+  font-size: 8px;
+}
+
+.font8 {
+  font-size: 12px;
+}
+
+.font10 {
+  font-size: 14px;
+}
+
+.font12 {
+  font-size: 16px;
+}

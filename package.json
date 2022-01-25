@@ -1,0 +1,30 @@
+{
+  "name": "pdfservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pdfApi.js",
+  "scripts": {
+    "dev": "SET NODE_ENV=dev & nodemon pdfApi.js",
+    "prod": "SET NODE_ENV=prod & node pdfApi.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@pdf-lib/fontkit": "^1.1.0",
+    "axios": "^0.19.2",
+    "bluebird": "^3.5.5",
+    "express": "^4.17.0",
+    "html-pdf": "^2.2.0",
+    "moment": "^2.24.0",
+    "mustache": "^4.2.0",
+    "nodemon": "^2.0.2",
+    "pdf-lib": "^1.12.0",
+    "pdf-to-base64": "^1.0.2",
+    "puppeteer": "^13.0.1",
+    "uniqid": "^5.2.0",
+    "winston": "^3.2.1"
+  },
+  "browserslist": [
+    "Safari >=4"
+  ]
+}

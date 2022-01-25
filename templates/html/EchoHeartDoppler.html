@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="style/ecg.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div>
+        <div>
+            <div class="pdf-table">
+                <div class="margin-left header">
+                    {{#examination_date}}
+                    <div>תאריך הבדיקה:</div>
+                    {{/examination_date}}
+                    {{#done_by}}
+                    <div>בוצע ע״י:</div>
+                    {{/done_by}}
+                    {{#how_result_delivered}}
+                    <div>אופן מסירת התוצאה:</div>
+                    {{/how_result_delivered}}
+                    {{#cassette_number}}
+                    <div>מס׳ קלטת:</div>
+                    {{/cassette_number}}
+                </div>
+                <div>
+                    {{#examination_date}}
+                    <div class="line-break">{{examination_date}}</div>
+                    {{/examination_date}}
+                    {{#done_by}}
+                    <div class="line-break">{{done_by}}</div>
+                    {{/done_by}}
+                    {{#how_result_delivered}}
+                    <div class="line-break">{{how_result_delivered}}</div>
+                    {{/how_result_delivered}}
+                    {{#cassette_number}}
+                    <div class="line-break">{{cassette_number}}</div>
+                    {{/cassette_number}}
+                </div>
+            </div>
+
+            {{#examination_reason}}
+            <div>
+                <div class="content header">סיבת הבדיקה:</div>
+                <div class="line-break">{{examination_reason}}</div>
+            </div>
+            {{/examination_reason}}
+
+            {{#isDisplayMeasurements}}
+            <div class="pdf-table">
+                <div class="flex-end">
+                    {{#aorta_is_up}}
+                    <div>אאורטה עולה:</div>
+                    {{/aorta_is_up}}
+                    {{#aorta_root}}
+                    <div>שורש האאורטה:</div>
+                    {{/aorta_root}}
+                    {{#left_atrium}}
+                    <div>פרוזדור שמאלי ((D-2</div>
+                    {{/left_atrium}}
+                    {{#left_atrium_are}}
+                    <div>שטח הפרוזדור השמאלי (CV 4)</div>
+                    {{/left_atrium_are}}
+                    {{#left_chamber_diameter_on_systole}}
+                    <div>קוטר חדר שמאלי בזמן סיסטולה:</div>
+                    {{/left_chamber_diameter_on_systole}}
+                    {{#left_chamber_diameter_on_diastole}}
+                    <div>קוטר חדר שמאלי בזמן דיאסטולה:</div>
+                    {{/left_chamber_diameter_on_diastole}}
+                    {{#ventricular_septal_proximal_thickness}}
+                    <div>עובי המחיצה הבין חדרית - פרוקסימלי:</div>
+                    {{/ventricular_septal_proximal_thickness}}
+                    {{#ventricular_septal_thickness}}
+                    <div>עובי המחיצה בין חדרית:</div>
+                    {{/ventricular_septal_thickness}}
+                    {{#back_wall_thickness}}
+                    <div>עובי דופן אחורית:</div>
+                    {{/back_wall_thickness}}
+                </div>
+                <div class="padding-sides text-center">
+                    <div class="line-break header">תוצאה</div>
+                    {{#aorta_is_up}}
+                    <div class="line-break">{{aorta_is_up}}</div>
+                    {{/aorta_is_up}}
+                    {{#aorta_root}}
+                    <div class="line-break">{{aorta_root}}</div>
+                    {{/aorta_root}}
+                    {{#left_atrium}}
+                    <div class="line-break">{{left_atrium}}</div>
+                    {{/left_atrium}}
+                    {{#left_atrium_area}}
+                    <div class="line-break">{{left_atrium_area}}</div>
+                    {{/left_atrium_area}}
+                    {{#left_chamber_diameter_on_systole}}
+                    <div class="line-break">{{left_chamber_diameter_on_systole}}</div>
+                    {{/left_chamber_diameter_on_systole}}
+                    {{#left_chamber_diameter_on_diastole}}
+                    <div class="line-break">{{left_chamber_diameter_on_diastole}}</div>
+                    {{/left_chamber_diameter_on_diastole}}
+                    {{#ventricular_septal_proximal_thickness}}
+                    <div class="line-break">{{ventricular_septal_proximal_thickness}}</div>
+                    {{/ventricular_septal_proximal_thickness}}
+                    {{#back_wall_thickness}}
+                    <div class="line-break">{{back_wall_thickness}}</div>
+                    {{/back_wall_thickness}}
+                </div>
+                <div class="padding-sides text-center">
+
+                        <div class="header">ערך נורמלי למבוגר:</div>
+                        {{#aorta_is_up}}
+                        <div>21-34 מ״מ:</div>
+                        {{/aorta_is_up}}
+                        {{#aorta_root}}
+                        <div>20-37 מ״מ</div>
+                        {{/aorta_root}}
+                        {{#left_atrium}}
+                        <div>19-40 מ״מ</div>
+                        {{/left_atrium}}
+                        {{#left_atrium_are}}
+                        <div>16-18 מ״מ</div>
+                        {{/left_atrium_are}}
+                        {{#left_chamber_diameter_on_systole}}
+                        <div>23-40 מ״מ</div>
+                        {{/left_chamber_diameter_on_systole}}
+                        {{#left_chamber_diameter_on_diastole}}
+                        <div>35-54 מ״מ</div>
+                        {{/left_chamber_diameter_on_diastole}}
+
+                        {{#ventricular_septal_proximal_thickness}}
+                        <div>-</div>
+                        {{/ventricular_septal_proximal_thickness}}
+       
+                        {{#ventricular_septal_thickness}}
+                        <div>06-11 מ״מ</div>
+                        {{/ventricular_septal_thickness}}
+                        {{#back_wall_thickness}}
+                        <div >06-11 מ״מ</div>
+                        {{/back_wall_thickness}}
+                    </div>
+                </div>
+            </div>
+            {{/isDisplayMeasurements}}
+
+            <div class="pdf-table">
+                <div class="margin-left header">
+                    {{#weight}}
+                    <div>משקל:</div>
+                    {{/weight}}
+                    {{#height}}
+                    <div>גובה:</div>
+                    {{/height}}
+                    {{#lvm}}
+                    <div>LVM:</div>
+                    {{/lvm}}
+                    {{#lvm_bsa}}
+                    <div>LVM/BSA:</div>
+                    {{/lvm_bsa}}
+                    {{#fs_percent}}
+                    <div>FS%:</div>
+                    {{/fs_percent}}
+                </div>
+                <div>
+                    {{#weight}}
+                    <div class="line-break">{{weight}}</div>
+                    {{/weight}}
+                    {{#height}}
+                    <div class="line-break">{{height}}</div>
+                    {{/height}}
+                    {{#lvm}}
+                    <div class="line-break">{{lvm}} גרם</div>
+                    {{/lvm}}
+                    {{#lvm_bsa}}
+                    <div class="line-break">{{lvm_bsa}} מטר/גרם</div>
+                    {{/lvm_bsa}}
+                    {{#fs_percent}}
+                    <div class="line-break">{{fs_percent}}</div>
+                    {{/fs_percent}}
+                </div>
+            </div>
+
+            {{#isDisplayLeftVentricularSystolic}}
+            <div class="table-header">תפקוד סיסטולי ככלי ואזורי של חדר שמאל</div>
+            <div class="pdf-table">
+                <div class="margin-left header">
+                    {{#left_chamber}}
+                    <div>חדר שמאל:</div>
+                    {{/left_chamber}}
+                    {{#extraction_channel_left_chamber}}
+                    <div>אפיק מוצא חדר שמאל:</div>
+                    {{/extraction_channel_left_chamber}}
+                </div>
+                <div>
+                    {{#left_chamber}}
+                    <div class="line-break">{{left_chamber}}</div>
+                    {{/left_chamber}}
+                    {{#extraction_channel_left_chamber}}
+                    <div class="line-break">{{extraction_channel_left_chamber}}</div>
+                    {{/extraction_channel_left_chamber}}
+                </div>
+            </div>
+            {{/isDisplayLeftVentricularSystolic}}
+
+
+            {{#isDisplayEchoHeartDopplerSummary}}
+            <div>
+                <div class="sub-header header margin-top">סיכום אקו לב דופלר</div>
+                <div class="table-center">
+                    {{#left_basal_sep}}
+                    <div class="container">
+                        <img class="img-container" src="data:image/png;base64,{{basalRestImage}}" />
+                        <span style="top: 88px;left: 36px;" class="text-inner header">{{left_basal_sep}}</span>
+                        <span style="top: 55px;left: 33px;" class="text-inner header">{{leftbasal_as2}}</span>
+                        <span style="top: 15px;left: 50px;" class="text-inner header">{{left_basal_ant}}</span>
+                        <span style="top: 15px;left: 90px;" class="text-inner header">{{left_basal_lat}}</span>
+                        <span style="top: 55px;left: 103px;" class="text-inner header">{{left_basal_post}}</span>
+                        <span style="top: 88px;left: 100px;" class="text-inner header">{{left_basal_inf}}</span>
+                    </div>
+                    {{/left_basal_sep}}
+                    {{#left_mid_sep}}
+                    <div class="container" >
+                        <img class="img-container" src="data:image/png;base64,{{midRestImage}}"/>
+                        <span style="top: 86px;left: 49px;" class="text-inner header">{{left_mid_sep}}</span>
+                        <span style="top: 52px;left: 46px;" class="text-inner header">{{left_mid_as2}}</span>
+                        <span style="top: 18px;left: 65px;" class="text-inner header">{{left_mid_ant}}</span>
+                        <span style="top: 18px;left: 105px;" class="text-inner header">{{left_mid_lat}}</span>
+                        <span style="top: 55px;left: 125px;" class="text-inner header">{{left_mid_post2}}</span>
+                        <span style="top: 86px;left: 120px;" class="text-inner header">{{left_mid_inf}}</span>
+                    </div>
+                    {{/left_mid_sep}}
+                    {{#left_apical_ant2}}
+                    <div class="container" width="150">
+                        <img class="img-container" src="data:image/png;base64,{{apicalRest2Image}}"  />
+                        <span style="top: 16px;left: 72px;" class="text-inner header">{{left_apical_ant2}}</span>
+                        <span style="top: 40px;left: 115px;" class="text-inner header">{{left_basel_post}}</span>
+                        <span style="top: 85px;left: 115px;" class="text-inner header">{{left_mid_post1}}</span>
+                        <span style="top: 113px;left: 70px;" class="text-inner header">{{left_apical_as2}}</span>
+                        <span style="top: 85px;left: 30px;" class="text-inner header">{{left_basal_as1}}</span>
+                        <span style="top: 40px;left: 31px;" class="text-inner header">{{left_mid_as1}}</span>
+                    </div>
+                    {{/left_apical_ant2}}
+                    {{#left_apical_ant1}}
+                    <div class="container" width="150">
+                        <img class="img-container" src="data:image/png;base64,{{apicalRestImage}}" />
+                        <span style="top: 32px;left: 30px;" class="text-inner header">{{left_apical_ant1}}</span>
+                        <span style="top: 35px;left: 65px;" class="text-inner header">{{left_apical_lat}}</span>
+                        <span style="top: 105px;left: 30px;" class="text-inner header">{{left_apical_as1}}</span>
+                        <span style="top: 110px;left: 70px;" class="text-inner header">{{left_apical_sep}}</span>
+                    </div>
+                    {{/left_apical_ant1}}
+                </div>
+                <div class="text-center">
+                    NORMAL=1, HYRO=2, AKINETIC=3, DYSKINETIC=4, ANEURYSMAL=5, 0= לא נצפה
+                </div>
+            </div>
+            {{/isDisplayEchoHeartDopplerSummary}}
+           
+            <div class="pdf-table margin-top">
+                <div class="margin-left header">
+                    {{#lvwmi}}
+                    <div>LVWMI</div>
+                    {{/lvwmi}}
+                    {{#estimated_ejection_fraction}}
+                    <div>מקטע פליטה מוערך של חדר שמאל:</div>
+                    {{/estimated_ejection_fraction}}
+                    {{#measured_ejection_fraction}}
+                    <div>מקטע פליטה נמדד של חדר שמאל:</div>
+                    {{/measured_ejection_fraction}}
+                    {{#measurement_method}}
+                    <div>שיטת מדידה:</div>
+                    {{/measurement_method}}
+                    {{#left_chamber_functionality}}
+                    <div>תפקוד כולל של חדר שמאל:</div>
+                    {{/left_chamber_functionality}}
+                    {{#right_chamber}}
+                    <div>חדר ימין:</div>
+                    {{/right_chamber}}
+                    {{#heart_atrium}}
+                    <div>עליות הלב:</div>
+                    {{/heart_atrium}}
+                    {{#heart_septum}}
+                    <div>מחיצת לב:</div>
+                    {{/heart_septum}}
+                    {{#pericardial_effusion}}
+                    <div>תפליט פריקדיארי:</div>
+                    {{/pericardial_effusion}}
+                    {{#aorta}}
+                    <div>האאורטה:</div>
+                    {{/aorta}}
+                    {{#ascending_aorta_dilation_diameter}}
+                    <div>קיימת הרחבה של האאורטה העולה בקוטר:</div>
+                    {{/ascending_aorta_dilation_diameter}}
+                    {{#abdominal_aorta_dilation_diameter}}
+                    <div>קיימת הרחה של האאורטה הביטנית בקוטר:</div>
+                    {{/abdominal_aorta_dilation_diameter}}
+                    {{#vegetation}}
+                    <div>וגטציות:</div>
+                    {{/vegetation}}
+                </div>
+                <div>
+                    {{#lvwmi}}
+                    <div class="line-break">{{lvwmi}}</div>
+                    {{/lvwmi}}
+                    {{#estimated_ejection_fraction}}
+                    <div class="line-break">{{estimated_ejection_fraction}}</div>
+                    {{/estimated_ejection_fraction}}
+                    {{#measured_ejection_fraction}}
+                    <div class="line-break">{{measured_ejection_fraction}}</div>
+                    {{/measured_ejection_fraction}}
+                    {{#measurement_method}}
+                    <div class="line-break">{{measurement_method}}</div>
+                    {{/measurement_method}}
+                    {{#left_chamber_functionality}}
+                    <div class="line-break">{{left_chamber_functionality}}</div>
+                    {{/left_chamber_functionality}}
+                    {{#right_chamber}}
+                    <div class="line-break">{{right_chamber}}</div>
+                    {{/right_chamber}}
+                    {{#heart_atrium}}
+                    <div class="line-break">{{heart_atrium}}</div>
+                    {{/heart_atrium}}
+                    {{#heart_septum}}
+                    <div class="line-break">{{heart_septum}}</div>
+                    {{/heart_septum}}
+                    {{#pericardial_effusion}}
+                    <div class="line-break">{{pericardial_effusion}}</div>
+                    {{/pericardial_effusion}}
+                    {{#aorta}}
+                    <div class="line-break">{{aorta}}</div>
+                    {{/aorta}}
+                    {{#ascending_aorta_dilation_diameter}}
+                    <div class="line-break">{{ascending_aorta_dilation_diameter}} ס"מ</div>
+                    {{/ascending_aorta_dilation_diameter}}
+                    {{#abdominal_aorta_dilation_diameter}}
+                    <div class="line-break">{{abdominal_aorta_dilation_diameter}} ס"מ</div>
+                    {{/abdominal_aorta_dilation_diameter}}
+                    {{#vegetation}}
+                    <div class="line-break">{{vegetation}}</div>
+                    {{/vegetation}}
+
+
+                </div>
+            </div>
+
+            {{#isDisplayMitralValve}}
+            <div>
+                <div class="content header">מסתם מיטרלי</div>
+                <div class="pdf-table">
+                    <div class="margin-left header">
+                        {{#mitral_valve_structure}}
+                        <div>מבנה:</div>
+                        {{/mitral_valve_structure}}
+                        {{#mitral_valve_doppler}}
+                        <div>דופלר:</div>
+                        {{/mitral_valve_doppler}}
+                    </div>
+                    <div>
+                        {{#mitral_valve_structure}}
+                        <div class="line-break">{{mitral_valve_structure}}</div>
+                        {{/mitral_valve_structure}}
+                        {{#mitral_valve_doppler}}
+                        <div class="line-break">{{mitral_valve_doppler}}</div>
+                        {{/mitral_valve_doppler}}
+                    </div>
+                </div>    
+            </div>
+            {{/isDisplayMitralValve}}
+
+
+            {{#isDisplayExtendedColoredDoppler}}
+            <div>
+                <div class="table-header">דופלר צבעוני מורחב</div>
+                <div class="pdf-table table-ltr">
+                    <div style="margin-right: 20px;" class="header">
+                        {{#jet_area}}
+                        <div>Jet area:</div>
+                        {{/jet_area}}
+                        {{#pisa}}
+                        <div>PISA:</div>
+                        {{/pisa}}
+                        {{#jet_la_ratio}}
+                        <div>Jet / LA ratio:</div>
+                        {{/jet_la_ratio}}
+                        {{#vneq}}
+                        <div>Vneq:</div>
+                        {{/vneq}}
+                        {{#cw}}
+                        <div>CW:</div>
+                        {{/cw}}
+                        {{#tvi}}
+                        <div>TVI:</div>
+                        {{/tvi}}
+                        {{#regurgitant_flow_rate}}
+                        <div>Regurgitant flow rate:</div>
+                        {{/regurgitant_flow_rate}}
+                        {{#regurgitant_flow_rate}}
+                        <div>Regurgitant flow rate:</div>
+                        {{/regurgitant_flow_rate}}
+                        {{#regurgitant_flow_rate}}
+                        <div>Effective regurgitant orifice:</div>
+                        {{/regurgitant_flow_rate}}
+                        {{#effective_regurgitant_orifice}}
+                        <div>Effective regurgitant orifice:</div>
+                        {{/effective_regurgitant_orifice}}
+                        {{#mitral_vena_contracta}}
+                        <div>Regurgitant volume:</div>
+                        {{/mitral_vena_contracta}}
+                        {{#pulmonary_venous_flow}}
+                        <div>Pulmonary venous flow:</div>
+                        {{/pulmonary_venous_flow}}
+                        {{#systolic_diameter}}
+                        <div>S:</div>
+                        {{/systolic_diameter}}
+                        {{#aortic_regurgitation}}
+                        <div>AR:</div>
+                        {{/aortic_regurgitation}}
+                        {{#diastolic_diameter}}
+                        <div>D:</div>
+                        {{/diastolic_diameter}}
+                        {{#systolic_flow}}
+                        <div>Sydtolic flow:</div>
+                        {{/systolic_flow}}
+                        {{#dt_per32mm_hg}}
+                        <div>dT (per 32 mmHg):</div>
+                        {{/dt_per32mm_hg}}
+                        {{#dp_dt}}
+                        <div>dp/dt:</div>
+                        {{/dp_dt}}
+
+                    </div>
+                    <div>
+                        {{#jet_area}}
+                        <div class="line-break">{{jet_area}} cm^2</div>
+                        {{/jet_area}}
+                        {{#pisa}}
+                        <div class="line-break">{{pisa}} cm</div>
+                        {{/pisa}}
+                        {{#jet_la_ratio}}
+                        <div class="line-break">{{jet_la_ratio}}</div>
+                        {{/jet_la_ratio}}
+                        {{#vneq}}
+                        <div class="line-break">{{vneq}} cm/sec</div>
+                        {{/vneq}}
+                        {{#cw}}
+                        <div class="line-break">{{cw}} cm/sec</div>
+                        {{/cw}}
+                        {{#tvi}}
+                        <div class="line-break">{{tvi}}</div>
+                        {{/tvi}}
+                        {{#regurgitant_flow_rate}}
+                        <div class="line-break">{{regurgitant_flow_rate}} cm^2/sec severe mr>0.4 cm^2</div>
+                        {{/regurgitant_flow_rate}}
+                        {{#regurgitant_flow_rate}}
+                        <div class="line-break">{{regurgitant_flow_rate}} cm^2/sec severe mr>0.4 cm^2</div>
+                        {{/regurgitant_flow_rate}}
+                        {{#regurgitant_flow_rate}}
+                        <div class="line-break">{{regurgitant_flow_rate}} severe mr>0.4 cm^2</div>
+                        {{/regurgitant_flow_rate}}
+                        {{#effective_regurgitant_orifice}}
+                        <div class="line-break">{{effective_regurgitant_orifice}} severe mr>60 cm^3</div>
+                        {{/effective_regurgitant_orifice}}
+                        {{#mitral_vena_contracta}}
+                        <div class="line-break">{{mitral_vena_contracta}} cm/sec</div>
+                        {{/mitral_vena_contracta}}
+                        {{#pulmonary_venous_flow}}
+                        <div class="line-break">{{pulmonary_venous_flow}} cm/sec</div>
+                        {{/pulmonary_venous_flow}}
+                        {{#systolic_diameter}}
+                        <div class="line-break">{{systolic_diameter}} cm/sec</div>
+                        {{/systolic_diameter}}
+                        {{#aortic_regurgitation}}
+                        <div class="line-break">{{aortic_regurgitation}} cm/sec</div>
+                        {{/aortic_regurgitation}}
+                        {{#diastolic_diameter}}
+                        <div class="line-break">{{diastolic_diameter}}</div>
+                        {{/diastolic_diameter}}
+                        {{#systolic_flow}}
+                        <div class="line-break">{{systolic_flow}}</div>
+                        {{/systolic_flow}}
+                        {{#dt_per32mm_hg}}
+                        <div class="line-break">{{dt_per32mm_hg}} msec</div>
+                        {{/dt_per32mm_hg}}
+                        {{#dp_dt}}
+                        <div class="line-break">{{dp_dt}} MmHg/sec</div>
+                        {{/dp_dt}}
+                        
+                    </div>
+                </div>    
+            </div>
+            {{/isDisplayExtendedColoredDoppler}}
+
+            {{#isDisplayMitralFlow}}
+            <div>
+                <div class="table-header">זרימה מיטרלית</div>
+                <div class="pdf-table table-ltr">
+                    <div style="margin-right: 20px;" class="header">
+                        {{#e_wave}}
+                        <div>E:</div>
+                        {{/e_wave}}
+                        {{#a_wave}}
+                        <div>A:</div>
+                        {{/a_wave}}
+                        {{#e_wave_a_wave_ratio}}
+                        <div>E/A ratio:</div>
+                        {{/e_wave_a_wave_ratio}}
+                        {{#deceleration}}
+                        <div>Deceleration:</div>
+                        {{/deceleration}}                   
+                    </div>
+                    <div>
+                        {{#e_wave}}
+                        <div class="line-break">{{e_wave}} cm/sec</div>
+                        {{/e_wave}}
+                        {{#a_wave}}
+                        <div class="line-break">{{a_wave}} cm/sec</div>
+                        {{/a_wave}}
+                        {{#e_wave_a_wave_ratio}}
+                        <div class="line-break">{{e_wave_a_wave_ratio}}</div>
+                        {{/e_wave_a_wave_ratio}}
+                        {{#deceleration}}
+                        <div class="line-break">{{deceleration}} msec</div>
+                        {{/deceleration}}               
+                    </div>
+                </div>    
+            </div>
+            {{/isDisplayMitralFlow}}
+
+            <div class="pdf-table">
+                <div class="margin-left header">
+                    {{#maximum_flow_speed}}
+                    <div>מהירות זרימה מקסימלית:</div>
+                    {{/maximum_flow_speed}}
+                    {{#avg_flow_speed}}
+                    <div>מהירות זרימה ממוצעת:</div>
+                    {{/avg_flow_speed}}
+                    {{#mitral_max_pressure_gradient}}
+                    <div>מפל לחצים מקסימלי:</div>
+                    {{/mitral_max_pressure_gradient}}
+                    {{#mitral_avg_pressure_gradient}}
+                    <div>מפל לחצים ממוצע:</div>
+                    {{/mitral_avg_pressure_gradient}}
+                    {{#calculated_mitral_valve}}
+                    <div>המסתם המיטרלי מחושב:</div>
+                    {{/calculated_mitral_valve}}
+                    {{#mitral_valve_area}}
+                    <div>המסתם המיטרלי נמדד:</div>
+                    {{/mitral_valve_area}}
+                </div>
+                <div>
+                    {{#maximum_flow_speed}}
+                    <div class="line-break">{{maximum_flow_speed}}</div>
+                    {{/maximum_flow_speed}}
+                    {{#avg_flow_speed}}
+                    <div class="line-break">{{avg_flow_speed}}</div>
+                    {{/avg_flow_speed}}
+                    {{#mitral_max_pressure_gradient}}
+                    <div class="line-break">{{mitral_max_pressure_gradient}}</div>
+                    {{/mitral_max_pressure_gradient}}
+                    {{#mitral_avg_pressure_gradient}}
+                    <div class="line-break">{{mitral_avg_pressure_gradient}}</div>
+                    {{/mitral_avg_pressure_gradient}}
+                    {{#calculated_mitral_valve}}
+                    <div class="line-break">{{calculated_mitral_valve}} סמ"ר</div>
+                    {{/calculated_mitral_valve}}
+                    {{#mitral_valve_area}}
+                    <div class="line-break">{{mitral_valve_area}} סמ"ר</div>
+                    {{/mitral_valve_area}}
+                </div>
+            </div>
+
+            {{#isDisplayExtendedDiastolicEvaluation}}
+            <div>
+                <div class="table-header margin-top">הערכה דיאסטולית מורחבת</div>
+                <div class="pdf-table table-ltr">
+                    <div style="margin-right: 20px;" class="header">
+                        {{#ivrt}}
+                        <div>IVRT:</div>
+                        {{/ivrt}}
+                        {{#ivct}}
+                        <div>IVCT:</div>
+                        {{/ivct}}
+                        {{#mitral_tvi}}
+                        <div>Mitral:</div>
+                        {{/mitral_tvi}}                  
+                    </div>
+                    <div>
+                        {{#ivrt}}
+                        <div class="line-break">{{ivrt}} 100-70msec</div>
+                        {{/ivrt}}
+                        {{#ivct}}
+                        <div class="line-break">{{ivct}} cm</div>
+                        {{/ivct}}
+                        {{#mitral_tvi}}
+                        <div class="line-break">{{mitral_tvi}}</div>
+                        {{/mitral_tvi}}           
+                    </div>
+                </div>    
+            </div>
+
+            <div class="pdf-table">
+                <div class="margin-left header">
+                    {{#diastolic_function}}
+                    <div class="line-break">תפקוד דיאסטולי:</div>
+                    {{/diastolic_function}}
+                </div>
+                <div>
+                    {{#diastolic_function}}
+                    <div class="line-break">{{diastolic_function}}</div>
+                    {{/diastolic_function}}
+                </div>
+            </div>
+
+            {{/isDisplayExtendedDiastolicEvaluation}}
+
+            {{#isDisplayAorticValve}}
+            <div>
+                <div class="content header">מסתם אאורטלי</div>
+                <div class="pdf-table">
+                    <div class="margin-left header">
+                        {{#aortic_valve_structure}}
+                        <div>מבנה:</div>
+                        {{/aortic_valve_structure}}
+                        {{#aortic_valve_colored_doppler}}
+                        <div>דופלר צבעוני:</div>
+                        {{/aortic_valve_colored_doppler}}
+                    </div>
+                    <div>
+                        {{#aortic_valve_structure}}
+                        <div class="line-break">{{aortic_valve_structure}}</div>
+                        {{/aortic_valve_structure}}
+                        {{#aortic_valve_colored_doppler}}
+                        <div class="line-break">{{aortic_valve_colored_doppler}}</div>
+                        {{/aortic_valve_colored_doppler}}
+                    </div>
+                </div>    
+            </div>
+            {{/isDisplayAorticValve}}
+
+            
+            {{#isDisplayAorticFlow}}
+            <div>
+                <div class="table-header">זרימה אאורטלית</div>
+                <div class="pdf-table">
+                    <div class="margin-left header">
+                        {{#aortic_max_pressure_gradient}}
+                        <div>מפל לחצים מקסימלי:</div>
+                        {{/aortic_max_pressure_gradient}}
+                        {{#aortic_avg_pressure_gradient}}
+                        <div>מפל לחצים ממוצע:</div>
+                        {{/aortic_avg_pressure_gradient}}
+                        {{#aortic_outlet_diameter}}
+                        <div>קוטר אפיק המוצא:</div>
+                        {{/aortic_outlet_diameter}}
+                        {{#left_ventricular_out_flow_tract}}
+                        <div>אפיק המוצא TVI:</div>
+                        {{/left_ventricular_out_flow_tract}} 
+                        {{#vti_valve}}
+                        <div>מסתם VTI:</div>
+                        {{/vti_valve}}
+                        {{#aortic_valve_area}}
+                        <div>שטח המסתם האאורטלי:</div>
+                        {{/aortic_valve_area}}                  
+                    </div>
+                    <div>
+                        {{#aortic_max_pressure_gradient}}
+                        <div class="line-break">{{aortic_max_pressure_gradient}}</div>
+                        {{/aortic_max_pressure_gradient}}
+                        {{#aortic_avg_pressure_gradient}}
+                        <div class="line-break">{{aortic_avg_pressure_gradient}}</div>
+                        {{/aortic_avg_pressure_gradient}}
+                        {{#aortic_outlet_diameter}}
+                        <div class="line-break">{{aortic_outlet_diameter}}</div>
+                        {{/aortic_outlet_diameter}}
+                        {{#left_ventricular_out_flow_tract}}
+                        <div class="line-break">{{left_ventricular_out_flow_tract}}</div>
+                        {{/left_ventricular_out_flow_tract}}     
+                        {{#vti_valve}}
+                        <div class="line-break">{{vti_valve}}</div>
+                        {{/vti_valve}}   
+                        {{#aortic_valve_area}}
+                        <div class="line-break">{{aortic_valve_area}} סמ"ר</div>
+                        {{/aortic_valve_area}}             
+                    </div>
+                </div>    
+            </div>
+            {{/isDisplayAorticFlow}}
+
+            {{#isDisplayExtendedColoredDoppler}}
+            <div>
+                <div class="table-header">דופלר צבעוני מורחב</div>
+                <div class="pdf-table table-ltr">
+                    <div style="margin-right: 20px;" class="header">
+                        {{#half_pt}}
+                        <div>Pt 1/2:</div>
+                        {{/half_pt}}
+                        {{#al_jet_lvo_td_ratio}}
+                        <div>Al jet diametr:</div>
+                        {{/al_jet_lvo_td_ratio}}
+                        {{#al_jet_diametr }}
+                        <div>Al jet / LVOTd ratio:</div>
+                        {{/al_jet_diametr }}
+                        {{#aortic_vena_contracta1}}
+                        <div>Vena contracta:</div>
+                        {{/aortic_vena_contracta1}}
+                        
+
+                    </div>
+                    <div>
+                        {{#half_pt}}
+                        <div class="line-break">{{half_pt}} severe&lt;300 mesc</div>
+                        {{/half_pt}}
+                        {{#al_jet_lvo_td_ratio}}
+                        <div class="line-break">{{al_jet_lvo_td_ratio}} cm</div>
+                        {{/al_jet_lvo_td_ratio}}
+                        {{#al_jet_diametr}}
+                        <div class="line-break">{{al_jet_diametr}} severe>=0.6</div>
+                        {{/al_jet_diametr}}
+                        {{#aortic_vena_contracta1}}
+                        <div class="line-break">{{aortic_vena_contracta1}} AR>=0.6</div>
+                        {{/aortic_vena_contracta1}}
+                        
+                    </div>
+                </div>    
+            </div>
+            {{/isDisplayExtendedColoredDoppler}}
+
+            {{#isDisplayTricuspidValve}}
+            <div>
+                <div class="content header">מסתם טריקוספידלי</div>
+                <div class="pdf-table">
+                    <div class="margin-left header">
+                        {{#trivial_regurgitatio_structure}}
+                        <div>מבנה:</div>
+                        {{/trivial_regurgitatio_structure}}
+                        {{#trivial_regurgitatio_colored_doppler}}
+                        <div>דופלר צבעוני:</div>
+                        {{/trivial_regurgitatio_colored_doppler}}
+                        {{#systolic_gradient}}
+                        <div>מפל לחצים סיסטולי:</div>
+                        {{/systolic_gradient}}
+                        {{#estimated_pressure_in_rt_atrium}}
+                        <div>לחץ מוערך בעליה הימנית:</div>
+                        {{/estimated_pressure_in_rt_atrium}}
+                        {{#estimated_pulmonary_artery_pressure}}
+                        <div>לחץ דם ריאתי סיסטולי מוערך:</div>
+                        {{/estimated_pulmonary_artery_pressure}}
+                        {{#pulmonary_artery_pressure}}
+                        <div>לחץ דם ריאתי סיסטולי:</div>
+                        {{/pulmonary_artery_pressure}}
+                        {{#inferior_vena_cava}}
+                        <div>הוריד החלול התחתון IVC:</div>
+                        {{/inferior_vena_cava}}
+                    </div>
+                    <div>
+                        {{#trivial_regurgitatio_structure}}
+                        <div class="line-break">{{trivial_regurgitatio_structure}}</div>
+                        {{/trivial_regurgitatio_structure}}
+                        {{#trivial_regurgitatio_colored_doppler}}
+                        <div class="line-break">{{trivial_regurgitatio_colored_doppler}}</div>
+                        {{/trivial_regurgitatio_colored_doppler}}
+                        {{#systolic_gradient}}
+                        <div class="line-break">{{systolic_gradient}} ממ"כ</div>
+                        {{/systolic_gradient}}
+                        {{#estimated_pressure_in_rt_atrium}}
+                        <div class="line-break">{{estimated_pressure_in_rt_atrium}} ממ"כ</div>
+                        {{/estimated_pressure_in_rt_atrium}}
+                        {{#estimated_pulmonary_artery_pressure}}
+                        <div class="line-break">{{estimated_pulmonary_artery_pressure}} ממ"כ</div>
+                        {{/estimated_pulmonary_artery_pressure}}
+                        {{#pulmonary_artery_pressure}}
+                        <div class="line-break">{{pulmonary_artery_pressure}} ממ"כ</div>
+                        {{/pulmonary_artery_pressure}}
+                        {{#inferior_vena_cava}}
+                        <div class="line-break">{{inferior_vena_cava}}</div>
+                        {{/inferior_vena_cava}}
+                    </div>
+                </div>    
+            </div>
+            {{/isDisplayTricuspidValve}}
+
+            {{#isDisplayPulmonaryValve}}
+            <div>
+                <div class="content header">מסתם ריאתי</div>
+                <div class="pdf-table">
+                    <div class="margin-left header">
+                        {{#pulmonary_valve}}
+                        <div>מסתם ריאתי:</div>
+                        {{/pulmonary_valve}}
+                        {{#max_systolic_gradient}}
+                        <div>מפל לחצים מקסימלי:</div>
+                        {{/max_systolic_gradient}}
+                        {{#avg_systolic_gradient}}
+                        <div>מפל לחצים ממוצע:</div>
+                        {{/avg_systolic_gradient}}
+                        {{#extra_cardiac_finding}}
+                        <div>ממצאים חוץ לבביים:</div>
+                        {{/extra_cardiac_finding}}
+                        {{#cardiovascular_data}}
+                        <div>נתונים לרישום קרדיו וסקולרי:</div>
+                        {{/cardiovascular_data}}                     
+                    </div>
+                    <div>
+                        {{#pulmonary_valve}}
+                        <div class="line-break">{{pulmonary_valve}}</div>
+                        {{/pulmonary_valve}}
+                        {{#max_systolic_gradient}}
+                        <div class="line-break">{{max_systolic_gradient}}</div>
+                        {{/max_systolic_gradient}}
+                        {{#avg_systolic_gradient}}
+                        <div class="line-break">{{avg_systolic_gradient}}</div>
+                        {{/avg_systolic_gradient}}
+                        {{#extra_cardiac_finding}}
+                        <div class="line-break">{{extra_cardiac_finding}}</div>
+                        {{/extra_cardiac_finding}}
+                        {{#cardiovascular_data}}
+                        <div class="line-break">{{cardiovascular_data}}</div>
+                        {{/cardiovascular_data}}
+                    </div>
+                </div>    
+            </div>
+            {{/isDisplayPulmonaryValve}}
+
+            {{#summary}}
+            <div>
+                <div class="content header">סיכום:</div>
+                <div class="line-break">{{summary}}</div>
+            </div>
+            {{/summary}}
+
+
+
+            {{#isDisplaySecuritylevel}}
+            <div>
+                <div class="security-level">
+                    {{#electronic_signature_date}}
+                    <div>
+                        <div>{{electronic_signature_date}}</div>
+                        <div class="border"></div>
+                        <div class="header">נחתם בתאריך</div>
+                    </div>
+                    {{/electronic_signature_date}}
+                    {{#signed_by}}
+                    <div>
+                        <div>{{signed_by}}</div>
+                        <div class="border"></div>
+                        <div class="header">נחתם ע"י</div>
+                    </div>
+                    {{/signed_by}}
+                    {{#responsible_name}}
+                    <div>
+                        <div>{{responsible_name}}</div>
+                        <div class="border"></div>
+                        <div class="header">רופא/ה אחראי/ת</div>
+                    </div>
+                    {{/responsible_name}}
+                </div>
+            </div>
+            {{/isDisplaySecuritylevel}}
+        </div>
+    </div>
+</body>
+
+</html>

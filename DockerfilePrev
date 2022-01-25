@@ -1,0 +1,20 @@
+FROM nexusrepo:8082/node:12.17.0
+RUN mkdir -p /app
+COPY package.json /app
+RUN echo "deb http://nexusrepo:8081/repository/APT_Xenial_proxy/ xenial main" > /etc/apt/sources.list
+RUN apt install bzip2 libfontconfig
+RUN ln -fs /usr/share/zoneinfo/Asia/Jerusalem /etc/localtime && dpkg-reconfigure -f noninteractive tzdata
+WORKDIR /app
+COPY PhantomJS/phantomjs /usr/bin/
+RUN chmod u+x /usr/bin/phantomjs
+RUN npm config set registry http://nexusrepo:8081/repository/npm-group/ && \
+    npm config set proxy http://mwgdev:Q1w2e3r4!@10.70.99.30:9091 && \
+    npm config set https-proxy http://mwgdev:Q1w2e3r4!@10.70.99.30:9091 && \
+    npm config set noproxy nexusrepo && \
+    npm set strict-ssl false && \
+    npm i --unsafe-perm
+RUN rm -rf node_modules/phantomjs-prebuilt
+RUN npm install phantomjs-prebuilt@2.1.13
+COPY . /app/
+EXPOSE 4000
+CMD ["node", "pdfApi"]

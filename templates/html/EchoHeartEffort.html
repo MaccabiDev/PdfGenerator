@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="style/ecg.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div>
+        <div>
+            <div class="pdf-table">
+                <div class="margin-left header">
+                    {{#examination_date}}
+                    <div>תאריך בדיקה:</div>
+                    {{/examination_date}}
+                    {{#technician_name}}
+                    <div>טכנאי מבחן במאמץ:</div>
+                    {{/technician_name}}
+                    {{#eco_technician_name}}
+                    <div>טכנאי אקו:</div>
+                    {{/eco_technician_name}}
+                    {{#examination_number}}
+                    <div>מס׳ בדיקה:</div>
+                    {{/examination_number}}
+                    {{#cassette_number}}
+                    <div>מס׳ קלטת:</div>
+                    {{/cassette_number}}
+                    {{#sequential_number}}
+                    <div>מס׳ רץ:</div>
+                    {{/sequential_number}}
+                </div>
+                <div>
+                    {{#examination_date}}
+                    <div class="line-break">{{examination_date}}</div>
+                    {{/examination_date}}
+                    {{#technician_name}}
+                    <div class="line-break">{{technician_name}}</div>
+                    {{/technician_name}}
+                    {{#eco_technician_name}}
+                    <div class="line-break">{{eco_technician_name}}</div>
+                    {{/eco_technician_name}}
+                    {{#examination_number}}
+                    <div class="line-break">{{examination_number}}</div>
+                    {{/examination_number}}
+                    {{#cassette_number}}
+                    <div class="line-break">{{cassette_number}}</div>
+                    {{/cassette_number}}
+                    {{#sequential_number}}
+                    <div class="line-break">{{sequential_number}}</div>
+                    {{/sequential_number}}
+                </div>
+            </div>
+            {{#referral_reason}}
+            <div>
+                <div class="content header">סיבת פניה:</div>
+                <div class="line-break">{{referral_reason}}</div>
+            </div>
+            {{/referral_reason}}
+            {{#risk_factor}}
+            <div>
+                <div class="content header">גורמי סיכון:</div>
+                <div class="line-break">{{risk_factor}}</div>
+            </div>
+            {{/risk_factor}}
+            {{#cardiac_anamnesis}}
+            <div>
+                <div class="content header">אנמנזה קרדיאלית:</div>
+                <div class="line-break">{{cardiac_anamnesis}}</div>
+            </div>
+            {{/cardiac_anamnesis}}
+            {{#ecg_on_rest}}
+            <div>
+                <div class="content header">א.ק.ג במנוחה:</div>
+                <div class="line-break">{{ecg_on_rest}}</div>
+            </div>
+            {{/ecg_on_rest}}
+            {{#eco_on_rest}}
+            <div>
+                <div class="content header">אקו במנוחה:</div>
+                <div class="line-break">{{eco_on_rest}}</div>
+            </div>
+            {{/eco_on_rest}}
+            {{#medicine_on_treatment}}
+            <div>
+                <div class="content header">הטיפול התרופתי בביצוע הבדיקה:</div>
+                <div class="line-break">{{medicine_on_treatment}}</div>
+            </div>
+            {{/medicine_on_treatment}}
+            {{#protocol_named_by}}
+            <div>
+                <div class="content header">הנבדק ביצע מאמץ מדורג על מסילה לפני פרוטוקול ע״ש:</div>
+                <div class="line-break">{{protocol_named_by}}</div>
+            </div>
+            {{/protocol_named_by}}
+
+
+            <div>
+                <div class="content header">מהלך הבדיקה</div>
+                {{#isDisplayPulsePerMinute}}
+                <div class="table-header">דופק לדקה</div>
+                <div class="pdf-table">
+                    <div class="margin-left">
+                        {{#pulse_rest}}
+                        <div>מנוחה:</div>
+                        {{/pulse_rest}}
+                        {{#pulse}}
+                        <div>שיא המאמץ:</div>
+                        {{/pulse}}
+                        {{#pulse_max_pulse_percent}}
+                        <div>אחוז מדופק מרבי:</div>
+                        {{/pulse_max_pulse_percent}}
+                    </div>
+                    <div>
+                        {{#pulse_rest}}
+                        <div class="line-break">{{pulse_rest}}</div>
+                        {{/pulse_rest}}
+                        {{#pulse}}
+                        <div class="line-break">{{pulse}}</div>
+                        {{/pulse}}
+                        {{#pulse_max_pulse_percent}}
+                        <div class="line-break">{{pulse_max_pulse_percent}}</div>
+                        {{/pulse_max_pulse_percent}}
+                    </div>
+                </div>
+                {{/isDisplayPulsePerMinute}}
+                {{#isDisplayBloodPressure}}
+                <div class="table-header">לחץ דם ממ"ר</div>
+                <div class="pdf-table">
+                    <div class="margin-left">
+                        {{#diastolic_pressure_rest}}
+                        <div>מנוחה:</div>
+                        {{/diastolic_pressure_rest}}
+                        {{#diastolic_pressure}}
+                        <div>שיא המאמץ:</div>
+                        {{/diastolic_pressure}}
+                        {{#pressure_max_pressure_percent}}
+                        <div>אחוז מדופק מרבי:</div>
+                        {{/pressure_max_pressure_percent}}
+                    </div>
+                    <div>
+                        {{#diastolic_pressure_rest}}
+                        <div class="line-break">{{systolic_pressure_rest}}/{{diastolic_pressure_rest}}</div>
+                        {{/diastolic_pressure_rest}}
+                        {{#diastolic_pressure}}
+                        <div class="line-break">{{systolic_pressure}}/{{diastolic_pressure}}</div>
+                        {{/diastolic_pressure}}
+                        {{#pressure_max_pressure_percent}}
+                        <div class="line-break">{{pressure_max_pressure_percent}}</div>
+                        {{/pressure_max_pressure_percent}}
+                    </div>
+                </div>
+                {{/isDisplayBloodPressure}}
+            </div>
+
+            {{#examination_stopping_reason}}
+            <div>
+                <div class="content header">סיבת הפסקת הבדיקה:</div>
+                <div class="line-break">{{examination_stopping_reason}}</div>
+            </div>
+            {{/examination_stopping_reason}}
+            {{#stress_duration_in_minutes}}
+            <div>
+                <div class="content header">המאמץ הופסק אחרי:</div>
+                <div class="line-break">{{stress_duration_in_minutes}} דקות</div>
+            </div>
+            {{/stress_duration_in_minutes}}
+
+            <!-- האם להציג תוצאות בתנאי כלשהו -->
+            {{#isDisplayResult}}
+            <div>
+                <div class="sub-header header margin-top">תוצאות:</div>
+                {{#clinical_reaction}}
+                <div>
+                    <div class="content header">תגובה קלינית:</div>
+                    <div class="line-break">{{clinical_reaction}}</div>
+                </div>
+                {{/clinical_reaction}}
+                {{#eco_on_stress}}
+                <div>
+                    <div class="content header">בא.ק.ג במאמץ:</div>
+                    <div class="line-break">{{eco_on_stress}}</div>
+                </div>
+                {{/eco_on_stress}}
+                {{#in_leads}}
+                <div>
+                    <div class="content header">בחיבורים:</div>
+                    <div class="line-break">{{in_leads}}</div>
+                </div>
+                {{/in_leads}}
+                {{#eco_summary_on_stress}}
+                <div>
+                    <div class="content header">סיכום אקו לב במאמץ:</div>
+                    <div class="line-break">{{eco_summary_on_stress}}</div>
+                </div>
+                {{/eco_summary_on_stress}}
+                {{#eco_remark_on_stress}}
+                <div>
+                    <div class="content header">הערות:</div>
+                    <div class="line-break">{{eco_remark_on_stress}}</div>
+                </div>
+                {{/eco_remark_on_stress}}
+                {{#left_ventricle_functionality_after_stress}}
+                <div>
+                    <div class="content header">באקו מיד עם סיום המאמץ התפקוד הכללי של החדר השמאלי:</div>
+                    <div class="line-break">{{left_ventricle_functionality_after_stress}}</div>
+                </div>
+                {{/left_ventricle_functionality_after_stress}}
+                {{#evidence_of_decrease_regional_function}}
+                <div>
+                    <div class="content header">עדות לירידה בתפקוד האזורי:</div>
+                    <div class="line-break">{{evidence_of_decrease_regional_function}}</div>
+                </div>
+                {{/evidence_of_decrease_regional_function}}
+                {{#remark}}
+                <div>
+                    <div class="content header">הערות:</div>
+                    <div class="line-break">{{remark}}</div>
+                </div>
+                {{/remark}}
+            </div>
+            {{/isDisplayResult}}
+
+            {{#isDisplayMobilityOfWallsAtRest}}
+            <div>
+                <div class="sub-header header margin-top">תנועתיות הדפנות במנוחה:</div>
+                <div class="table-center">
+                    {{#basal_sep_on_rest}}
+                    <div class="container">
+                        <img class="img-container" src="data:image/png;base64,{{basalRestImage}}" />
+                        <span style="top: 88px;left: 36px;" class="text-inner header">{{basal_sep_on_rest}}</span>
+                        <span style="top: 55px;left: 33px;" class="text-inner header">{{basal_as_on_rest2}}</span>
+                        <span style="top: 15px;left: 50px;" class="text-inner header">{{basal_ant_on_rest}}</span>
+                        <span style="top: 15px;left: 90px;" class="text-inner header">{{basal_lat_on_rest}}</span>
+                        <span style="top: 55px;left: 103px;" class="text-inner header">{{basal_post_on_rest}}</span>
+                        <span style="top: 88px;left: 100px;" class="text-inner header">{{basal_inf_on_rest}}</span>
+                    </div>
+                    {{/basal_sep_on_rest}}
+                    {{#mid_sep_on_rest}}
+                    <div class="container" >
+                        <img class="img-container" src="data:image/png;base64,{{midRestImage}}"/>
+                        <span style="top: 86px;left: 49px;" class="text-inner header">{{mid_sep_on_rest}}</span>
+                        <span style="top: 52px;left: 46px;" class="text-inner header">{{mid_as_on_rest2}}</span>
+                        <span style="top: 18px;left: 65px;" class="text-inner header">{{mid_ant_on_rest}}</span>
+                        <span style="top: 18px;left: 105px;" class="text-inner header">{{mid_lat_on_rest}}</span>
+                        <span style="top: 55px;left: 125px;" class="text-inner header">{{mid_post_on_rest2}}</span>
+                        <span style="top: 86px;left: 120px;" class="text-inner header">{{mid_inf_on_rest}}</span>
+                    </div>
+                    {{/mid_sep_on_rest}}
+                    {{#apical_ant_on_rest2}}
+                    <div class="container" width="150">
+                        <img class="img-container" src="data:image/png;base64,{{apicalRest2Image}}"  />
+                        <span style="top: 16px;left: 72px;" class="text-inner header">{{apical_ant_on_rest2}}</span>
+                        <span style="top: 40px;left: 115px;" class="text-inner header">{{basel_post_on_rest}}</span>
+                        <span style="top: 85px;left: 115px;" class="text-inner header">{{mid_post_on_rest}}</span>
+                        <span style="top: 113px;left: 70px;" class="text-inner header">{{apical_as_on_rest2}}</span>
+                        <span style="top: 85px;left: 30px;" class="text-inner header">{{basal_as_on_rest}}</span>
+                        <span style="top: 40px;left: 31px;" class="text-inner header">{{mid_as_on_rest}}</span>
+                    </div>
+                    {{/apical_ant_on_rest2}}
+                    {{#apical_ant_on_rest}}
+                    <div class="container" width="150">
+                        <img class="img-container" src="data:image/png;base64,{{apicalRestImage}}" />
+                        <span style="top: 32px;left: 30px;" class="text-inner header">{{apical_ant_on_rest}}</span>
+                        <span style="top: 35px;left: 65px;" class="text-inner header">{{apical_lat_on_rest}}</span>
+                        <span style="top: 105px;left: 30px;" class="text-inner header">{{apical_sep_on_rest}}</span>
+                        <span style="top: 110px;left: 70px;" class="text-inner header">{{apical_as_on_rest}}</span>
+                    </div>
+                    {{/apical_ant_on_rest}}
+                </div>
+                <div class="text-center">
+                    NORMAL=1, HYRO=2, AKINETIC=3, DYSKINETIC=4, ANEURYSMAL=5, 0= לא נצפה
+                </div>
+            </div>
+            {{/isDisplayMobilityOfWallsAtRest}}
+           
+            {{#rest.length}}
+            <div class="table-center">
+                <div class="padding-sides text-center">
+                    {{#isDisplayRear}}
+                    <div class="header">תחתון</div>
+                    {{/isDisplayRear}}
+                    {{#rest}}
+                    {{#lower}}
+                    <div class="line-break">{{lower}}</div>
+                    {{/lower}}
+                    {{/rest}}
+                </div>
+                <div class="padding-sides text-center">
+                    {{#isDisplayLower}}
+                    <div class="header">אחורי</div>
+                    {{/isDisplayLower}}
+                    {{#rest}}
+                    {{#rear}}
+                    <div class="line-break">{{rear}}</div>
+                    {{/rear}}
+                    {{/rest}}
+                </div>
+                <div class="padding-sides text-center">
+                    {{#isDisplaySide}}
+                    <div class="header">צדדי</div>
+                    {{/isDisplaySide}}
+                    {{#rest}}
+                    {{#side}}
+                    <div class="line-break">{{side}}</div>
+                    {{/side}}
+                    {{/rest}}
+                </div>
+                <div class="padding-sides text-center">
+                    {{#isDisplayFront}}
+                    <div class="header">קדמי</div>
+                    {{/isDisplayFront}}
+                    {{#rest}}
+                    {{#front}}
+                    <div class="line-break">{{front}}</div>
+                    {{/front}}
+                    {{/rest}}
+                </div>
+                <div class="padding-sides text-center">
+                    {{#isDisplayFront_sptum}}
+                    <div class="header">ספטום קדמי</div>
+                    {{/isDisplayFront_sptum}}
+                    {{#rest}}
+                    {{#front_sptum}}
+                    <div class="line-break">{{front_sptum}}</div>
+                    {{/front_sptum}}
+                    {{/rest}}
+                </div>
+                <div class="padding-sides text-center">
+                    {{#isDisplaySptum}}
+                    <div class="header">ספטום</div>
+                    {{/isDisplaySptum}}
+                    {{#rest}}
+                    {{#sptum}}
+                    <div class="line-break">{{sptum}}</div>
+                    {{/sptum}}
+                    {{/rest}}
+                </div>
+                <div class="padding-sides text-center">
+                    {{#isDisplayHeart_point}}
+                    <div class="header">חוד הלב</div>
+                    {{/isDisplayHeart_point}}
+                    {{#rest}}
+                    {{#heart_point}}
+                    <div class="line-break">{{heart_point}}</div>
+                    {{/heart_point}}
+                    {{/rest}}
+                </div>
+            </div>
+            {{/rest.length}}
+            
+            {{#remark_on_rest}}
+            <div>
+                <div class="content header">הערות:</div>
+                <div class="line-break">{{remark_on_rest}}</div>
+            </div>
+            {{/remark_on_rest}}
+
+
+
+
+
+            {{#isDisplayMobilityOfWallsAtPeakEffort}}
+            <div>
+                <div class="sub-header header margin-top">תנועתיות הדפנות בשיא המאמץ:</div>
+                <div class="table-center">
+                    {{#basal_sep_on_stress}}
+                    <div class="container">
+                        <img class="img-container" src="data:image/png;base64,{{basalRestImage}}"/>
+                        <span style="top: 88px;left: 36px;" class="text-inner header">{{basal_sep_on_stress}}</span>
+                        <span style="top: 55px;left: 33px;" class="text-inner header">{{basal_as_on_stress2}}</span>
+                        <span style="top: 15px;left: 50px;" class="text-inner header">{{basal_ant_on_stress}}</span>
+                        <span style="top: 15px;left: 90px;" class="text-inner header">{{basal_lat_on_stress}}</span>
+                        <span style="top: 55px;left: 103px;" class="text-inner header">{{basal_post_on_stress}}</span>
+                        <span style="top: 88px;left: 100px;" class="text-inner header">{{basal_inf_on_stress}}</span>
+                    </div>
+                    {{/basal_sep_on_stress}}
+                    {{#mid_sep_on_stress}}
+                    <div class="container">
+                        <img class="img-container" src="data:image/png;base64,{{midRestImage}}"/>
+                        <span style="top: 86px;left: 49px;" class="text-inner header">{{mid_sep_on_stress}}</span>
+                        <span style="top: 52px;left: 46px;" class="text-inner header">{{mid_as_on_stress2}}</span>
+                        <span style="top: 18px;left: 65px;" class="text-inner header">{{mid_ant_on_stress}}</span>
+                        <span style="top: 18px;left: 105px;" class="text-inner header">{{mid_lat_on_stress}}</span>
+                        <span style="top: 55px;left: 125px;" class="text-inner header">{{mid_post_on_stress2}}</span>
+                        <span style="top: 86px;left: 120px;" class="text-inner header">{{mid_inf_on_stress}}</span>
+                    </div>
+                    {{/mid_sep_on_stress}}
+                    {{#apical_ant_on_stress2}}
+                    <div class="container">
+                        <img class="img-container" src="data:image/png;base64,{{apicalRest2Image}}" />
+                        <span style="top: 16px;left: 72px;" class="text-inner header">{{apical_ant_on_stress2}}</span>
+                        <span style="top: 40px;left: 115px;" class="text-inner header">{{basel_post_on_stress}}</span>
+                        <span style="top: 85px;left: 115px;" class="text-inner header">{{mid_post_on_stress}}</span>
+                        <span style="top: 113px;left: 70px;" class="text-inner header">{{apical_as_on_stress2}}</span>
+                        <span style="top: 85px;left: 30px;" class="text-inner header">{{basal_as_on_stress}}</span>
+                        <span style="top: 40px;left: 31px;" class="text-inner header">{{mid_as_on_stress}}</span>
+                    </div>
+                    {{/apical_ant_on_stress2}}
+                    {{#apical_ant_on_stress}}
+                    <div class="container">
+                        <img class="img-container" src="data:image/png;base64,{{apicalRestImage}}" />
+                        <span style="top: 32px;left: 30px;" class="text-inner header">{{apical_ant_on_stress}}</span>
+                        <span style="top: 35px;left: 65px;" class="text-inner header">{{apical_lat_on_stress}}</span>
+                        <span style="top: 105px;left: 30px;" class="text-inner header">{{apical_sep_on_stress}}</span>
+                        <span style="top: 110px;left: 70px;" class="text-inner header">{{apical_as_on_stres}}</span>
+                    </div>
+                    {{/apical_ant_on_stress}}
+                </div>
+                <div>
+                    <p class="text-center">NORMAL=1, HYRO=2, AKINETIC=3, DYSKINETIC=4, ANEURYSMAL=5, 0= לא נצפה</p>
+                </div>
+            </div>
+            {{/isDisplayMobilityOfWallsAtPeakEffort}}
+           
+            {{#line.length}}
+            <div class="table-center">
+                <div class="padding-sides text-center">
+                    {{#isDisplayRear_line}}
+                    <div class="header">תחתון</div>
+                    {{/isDisplayRear_line}}
+                    {{#line}}
+                    {{#lower}}
+                    <div class="line-break">{{lower}}</div>
+                    {{/lower}}
+                    {{/line}}
+                </div>
+                <div class="padding-sides text-center">
+                    {{#isDisplayLower_line}}
+                    <div class="header">אחורי</div>
+                    {{/isDisplayLower_line}}
+                    {{#line}}
+                    {{#rear}}
+                    <div class="line-break">{{rear}}</div>
+                    {{/rear}}
+                    {{/line}}
+                </div>
+                <div class="padding-sides text-center">
+                    {{#isDisplaySide_line}}
+                    <div class="header">צדדי</div>
+                    {{/isDisplaySide_line}}
+                    {{#line}}
+                    {{#side}}
+                    <div class="line-break">{{side}}</div>
+                    {{/side}}
+                    {{/line}}
+                </div>
+                <div class="padding-sides text-center">
+                    {{#isDisplayFront_line}}
+                    <div class="header">קדמי</div>
+                    {{/isDisplayFront_line}}
+                    {{#line}}
+                    {{#front}}
+                    <div class="line-break">{{front}}</div>
+                    {{/front}}
+                    {{/line}}
+                </div>
+                <div class="padding-sides text-center">
+                    {{#isDisplayFront_sptum_line}}
+                    <div class="header">ספטום קדמי</div>
+                    {{/isDisplayFront_sptum_line}}
+                    {{#line}}
+                    {{#front_sptum}}
+                    <div class="line-break">{{front_sptum}}</div>
+                    {{/front_sptum}}
+                    {{/line}}
+                </div>
+                <div class="padding-sides text-center">
+                    {{#isDisplaySptum_line}}
+                    <div class="header">ספטום</div>
+                    {{/isDisplaySptum_line}}
+                    {{#line}}
+                    {{#sptum}}
+                    <div class="line-break">{{sptum}}</div>
+                    {{/sptum}}
+                    {{/line}}
+                </div>
+                <div class="padding-sides text-center">
+                    {{#isDisplayHeart_point_line}}
+                    <div class="header">חוד הלב</div>
+                    {{/isDisplayHeart_point_line}}
+                    {{#line}}
+                    {{#heart_point}}
+                    <div class="line-break">{{heart_point}}</div>
+                    {{/heart_point}}
+                    {{/line}}
+                </div>
+            </div>
+            {{/line.length}}
+            
+            {{#remark_on_stress}}
+            <div>
+                <div class="content header">הערות:</div>
+                <div class="line-break">{{remark_on_stress}}</div>
+            </div>
+            {{/remark_on_stress}}
+            {{#hemodynamic}}
+            <div>
+                <div class="content header">המודנימיקה:</div>
+                <div class="line-break">{{hemodynamic}}</div>
+            </div>
+            {{/hemodynamic}}
+
+
+            {{#waterfall.length}}
+            <div class="pdf-table">
+                <div class="flex-end">
+                    <div class="header"></div>
+                    {{#waterfall}}
+                    {{#remark}}
+                    <div class="line-break">{{remark}}</div>
+                    {{/remark}}
+                    {{/waterfall}}
+                </div>
+                <div class="padding-sides text-center">
+                    <div class="header">מנוחה</div>
+                    {{#waterfall}}
+                    {{#rest}}
+                    <div class="line-break">{{rest}}</div>
+                    {{/rest}}
+                    {{/waterfall}}
+                </div>
+                <div class="padding-sides text-center">
+                    <div class="header">שיא המאמץ</div>
+                    {{#waterfall}}
+                    {{#effort_peak}}
+                    <div class="line-break">{{effort_peak}}</div>
+                    {{/effort_peak}}
+                    {{/waterfall}}
+                </div>
+                
+            </div>
+            {{/waterfall.length}}
+
+            {{#summary}}
+            <div>
+                <div class="content header">סיכום מבחן אקו במאמץ:</div>
+                <div class="line-break">{{summary}}</div>
+            </div>
+            {{/summary}}
+
+
+
+            {{#isDisplaySecuritylevel}}
+            <div>
+                <div class="security-level">
+                    {{#electronic_signature_date}}
+                    <div>
+                        <div>{{electronic_signature_date}}</div>
+                        <div class="border"></div>
+                        <div class="header">נחתם בתאריך</div>
+                    </div>
+                    {{/electronic_signature_date}}
+                    {{#signed_by}}
+                    <div>
+                        <div>{{signed_by}}</div>
+                        <div class="border"></div>
+                        <div class="header">נחתם ע"י</div>
+                    </div>
+                    {{/signed_by}}
+                    {{#responsible_name}}
+                    <div>
+                        <div>{{responsible_name}}</div>
+                        <div class="border"></div>
+                        <div class="header">רופא/ה אחראי/ת</div>
+                    </div>
+                    {{/responsible_name}}
+                </div>
+            </div>
+            {{/isDisplaySecuritylevel}}
+        </div>
+    </div>
+</body>
+
+</html>
